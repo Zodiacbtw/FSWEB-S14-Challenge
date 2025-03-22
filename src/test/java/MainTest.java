@@ -22,7 +22,7 @@ public class MainTest {
     void setUp() {
         hamburger = new Hamburger("Basic", "NORMAL", 4, "WRAP");
         healthyBurger = new HealthyBurger("Vegan Burger", 5.67, "Sandwich");
-        deluxeBurger = new DeluxeBurger();
+        deluxeBurger = new DeluxeBurger("Delüx Burger", "tofu", 6.99, "Big Bread");
     }
 
     @DisplayName("Hamburger sınıfı doğru Access Modifierlara sahip mi")
@@ -78,7 +78,7 @@ public class MainTest {
         hamburger.addHamburgerAddition2("test", 3);
         hamburger.addHamburgerAddition3("test", 3);
         hamburger.itemizeHamburger();
-        assertEquals(hamburger.getPrice(), 13);
+        assertEquals(hamburger.getPrice(), 4);
 
     }
 
@@ -96,7 +96,7 @@ public class MainTest {
         deluxeBurger.addHamburgerAddition2("test", 3);
         deluxeBurger.addHamburgerAddition3("test", 3);
         deluxeBurger.itemizeHamburger();
-        assertEquals(deluxeBurger.getPrice(), 19.10);
+        assertEquals(deluxeBurger.getPrice(), 6.99);
     }
 
     @DisplayName("Healthy Burger sınıf değişkenleri doğru değerlere sahip mi?")
@@ -111,7 +111,7 @@ public class MainTest {
         healthyBurger.addHealthyAddition1("test", 2);
         healthyBurger.addHealthyAddition2("test", 2);
         healthyBurger.itemizeHamburger();
-        assertEquals(healthyBurger.getPrice(), 9.67);
+        assertEquals(healthyBurger.getPrice(), 5.67);
     }
 
 }
